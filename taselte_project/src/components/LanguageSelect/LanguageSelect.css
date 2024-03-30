@@ -1,0 +1,35 @@
+/* LanguageSelect.css */
+
+.language-select {
+    display: flex;
+    align-items: center;
+    font-family: Cairo, sans-serif;
+  }
+  
+  .language-select select {
+    font-family: Cairo, sans-serif;
+    padding: 12px; /* Increase padding for a bigger select */
+    border: none;
+    background-color: #fff4db;
+    color: #333;
+    font-size: 15px; /* Increase font size for a bigger select */
+    appearance: none;
+  }
+
+  select {
+    border-radius: 0px;
+  }
+  
+  option {
+    font-family: Cairo, sans-serif;
+    background-color: #fff;
+  }
+  
+  .language-select select:focus {
+    outline: none;
+  }
+  
+  .language-select i {
+    color: #333; /* Color of the arrow icon */
+  }
+  
