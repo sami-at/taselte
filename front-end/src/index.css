@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 
 
 * {
     margin: 0;
-    
+    font-family: 'Cairo', sans-serif; /* Apply Cairo font to the navbar */
+
 }
 
-body {
-    font-family: Cairo, sans-serif;
-}

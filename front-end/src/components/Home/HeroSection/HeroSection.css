@@ -1,0 +1,41 @@
+.hero {
+  background-color: #eab02b; /* Basic background color */
+  background-image: linear-gradient(to left, #eab02b, #fdcc7b); /* Gradient background */
+  padding: 50px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  color: #000; /* Text color */
+  flex: 1;
+  padding: 20px;
+}
+
+.image {
+  flex: 1;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styling for button (adjust as needed) */
+button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}

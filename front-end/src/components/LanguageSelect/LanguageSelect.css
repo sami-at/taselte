@@ -3,11 +3,9 @@
 .language-select {
     display: flex;
     align-items: center;
-    font-family: Cairo, sans-serif;
   }
   
   .language-select select {
-    font-family: Cairo, sans-serif;
     padding: 12px; /* Increase padding for a bigger select */
     border: none;
     background-color: #fff4db;
@@ -21,7 +19,6 @@
   }
   
   option {
-    font-family: Cairo, sans-serif;
     background-color: #fff;
   }
   
@@ -32,4 +29,5 @@
   .language-select i {
     color: #333; /* Color of the arrow icon */
   }
+  
   
