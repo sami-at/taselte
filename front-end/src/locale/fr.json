@@ -4,5 +4,10 @@
     "about": "À propos",
     "products": "produits",
     "contact": "Contact"
+  },
+  "hero": {
+    "heading": "Bienvenue dans notre boutique de miel",
+    "description": "Découvrez les produits de miel de la plus haute qualité",
+    "button": "Acheter maintenant"
   }
 }

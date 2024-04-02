@@ -7,7 +7,7 @@ import './App.css';
 
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
-import Products from './components/Products/Products';
+import ProductsPage from './components/Products/ProductsPage/ProductsPage'; // Adjusted import path
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
@@ -20,7 +20,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/products" element={<ProductsPage />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

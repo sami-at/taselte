@@ -1,23 +1,33 @@
 .hero {
-  background-color: #eab02b; /* Basic background color */
-  background-image: linear-gradient(to left, #eab02b, #fdcc7b); /* Gradient background */
-  padding: 50px;
+  background-color: #eab02b;
+  background-image: linear-gradient(to right, #eab02b, #fdcc7b);
+  padding: 30px 50px; /* Reduce top and bottom padding */
   position: relative;
+  height: 80vh;
 }
 
 .container {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Add space between items */
+  margin-top: 8%;
 }
 
 .text {
-  color: #000; /* Text color */
-  flex: 1;
+  color: #000;
   padding: 20px;
+  flex: 1;
+  font-size: 23px;
+
+
 }
+
+
 
 .image {
   flex: 1;
+  height: auto;
+  margin-left: 150px; /* Add margin to the left */
 }
 
 .image img {
@@ -25,17 +35,40 @@
   height: auto;
 }
 
-/* Styling for button (adjust as needed) */
+p {
+  margin-bottom: 50px;
+}
+
 button {
   background-color: #fff;
   color: #000;
-  padding: 10px 20px;
+  padding: 10px 30px; /* Increase button size */
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
+  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-weight: bold; /* Make font bold */
 }
 
 button:hover {
   background-color: #ddd;
+}
+
+/* Right-to-left layout */
+.hero.rtl {
+  background-image: linear-gradient(to left, #eab02b, #fdcc7b);
+}
+
+.hero.rtl .container {
+  flex-direction: row-reverse;
+}
+
+.hero.rtl .text {
+  text-align: right;
+}
+
+.hero.rtl .image {
+  margin-left: 15%; /* Adjust as needed */
+  margin-right: 0; /* Reset margin-right */
 }
