@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './HeroSection.css';
+import honeyJarImage from '../../../images/honeyjar.png';
 
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
@@ -17,7 +18,7 @@ const HeroSection = () => {
           <button>{t('hero.button')}</button>
         </div>
         <div className="image">
-          <img src="src\images\honeyjar.png"   />
+          <img src={honeyJarImage} alt="Honey Jar" /> {/* Use the imported image */}
         </div>
       </div>
     </section>
