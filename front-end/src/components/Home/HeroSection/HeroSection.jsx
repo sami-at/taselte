@@ -17,7 +17,7 @@ const HeroSection = () => {
           <button>{t('hero.button')}</button>
         </div>
         <div className="image">
-          <img src="front-end\src\images\honeyjar.png"  />
+          <img src="src\images\honeyjar.png"   />
         </div>
       </div>
     </section>

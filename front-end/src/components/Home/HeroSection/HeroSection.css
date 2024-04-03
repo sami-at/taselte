@@ -7,10 +7,13 @@
 }
 
 .container {
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between; /* Add space between items */
-  margin-top: 8%;
+  margin-top: 5%;
+  gap: 50px;
+
 }
 
 .text {
@@ -25,13 +28,16 @@
 
 
 .image {
+  display: flex;
+  justify-content: end;
   flex: 1;
   height: auto;
-  margin-left: 150px; /* Add margin to the left */
+  margin-right: 30px;
+  
 }
 
 .image img {
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
@@ -69,6 +75,8 @@ button:hover {
 }
 
 .hero.rtl .image {
-  margin-left: 15%; /* Adjust as needed */
-  margin-right: 0; /* Reset margin-right */
+  margin-left: 6%; /* Reset margin-right */
+  display: flex;
+  justify-content: start;
+  margin-right: 0px;
 }
