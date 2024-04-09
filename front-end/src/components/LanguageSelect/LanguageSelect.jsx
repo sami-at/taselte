@@ -6,7 +6,6 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const LanguageSelect = () => {
   const { i18n } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false); // State to track whether the dropdown is open
 
   // Handle language change
   const handleChange = (e) => {
@@ -14,18 +13,14 @@ const LanguageSelect = () => {
     i18n.changeLanguage(selectedLanguage);
   };
 
-  // Toggle dropdown
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <div className="language-select">
-      <select onChange={handleChange} className={`language-select-dropdown ${isOpen ? 'open' : ''}`}> {/* Apply 'open' class when isOpen is true */}
-        <option value="ar">العربية (Arabic)</option>
-        <option value="fr">Français (French)</option>
+      <select onChange={handleChange} > 
+        <option value="ar">العربية</option>
+        <option value="fr">Français</option>
       </select>
-      <div className="icon-container" onClick={toggleDropdown}> {/* Icon container with onClick event */}
+      <div className="icon-container" > 
         <FontAwesomeIcon icon={faChevronDown} />
       </div>
     </div>

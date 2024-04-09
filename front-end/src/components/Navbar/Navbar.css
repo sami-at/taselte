@@ -25,13 +25,13 @@ nav {
 }
 
 .navigation-links {
-
   list-style-type: none;
   display: flex;
-  
   padding: 0;
   gap: 70px;
 }
+
+
 
 .navigation-links.show {
   gap: 0;
@@ -62,9 +62,6 @@ nav {
   display: block;
 }
 
-.navigation-links li {
-  margin-bottom: 20px;
-}
 
 .navigation-links li:last-child {
   margin-bottom: 0;
@@ -88,6 +85,10 @@ nav {
 @media screen and (max-width: 760px) {
   .navigation-links {
     display: none;
+  }
+
+  .navigation-links li {
+    margin-bottom: 20px;
   }
 
   .navdrawer-top {

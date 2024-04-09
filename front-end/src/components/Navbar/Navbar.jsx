@@ -35,6 +35,21 @@ const Navbar = () => {
     setShowMenu(false);
   };
 
+  // Click outside detection
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('nav') && showMenu) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [showMenu]);
+
   return (
     <nav>
       <Link to="/" className="logo">

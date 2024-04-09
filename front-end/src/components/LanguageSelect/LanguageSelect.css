@@ -3,6 +3,7 @@
 .language-select {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   
   .language-select select {
@@ -12,21 +13,27 @@
     color: #333;
     font-size: 15px; /* Increase font size for a bigger select */
     appearance: none;
+    cursor: pointer;
+
   }
 
-  select {
-    border-radius: 0px;
-  }
+  
   
   option {
     background-color: #fff;
+    cursor: pointer;
+
   }
   
   .language-select select:focus {
     outline: none;
+    cursor: pointer;
+
   }
   
   .language-select i {
+    cursor: pointer;
+
     color: #333; /* Color of the arrow icon */
   }
   
