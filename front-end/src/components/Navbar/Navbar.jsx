@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import LanguageSelect from '../LanguageSelect/LanguageSelect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import logo from '../../images/logo1.png';
+
 import './Navbar.css';
 
 const Navbar = () => {
@@ -53,7 +55,7 @@ const Navbar = () => {
   return (
     <nav>
       <Link to="/" className="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Honey_Logo_Orange.svg/1280px-Honey_Logo_Orange.svg.png" alt="Logo" />
+      <img src={logo} alt="Company Logo" />
       </Link>
       <div className="menu-icon" onClick={toggleMenu}>
         <FontAwesomeIcon icon={faBars} />

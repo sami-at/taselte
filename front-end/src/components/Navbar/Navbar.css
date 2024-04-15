@@ -5,6 +5,7 @@ nav {
   align-items: center;
   background-color: #fff4db;
   padding: 20px;
+  height: 60px;
 }
 
 .logo {
@@ -13,7 +14,7 @@ nav {
 
 .logo img {
   padding-top: 5px;
-  height: 38px;
+  height: 80px;
 }
 
 .menu-icon {

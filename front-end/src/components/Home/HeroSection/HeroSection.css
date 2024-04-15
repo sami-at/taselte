@@ -12,8 +12,8 @@
 .container {
   width: 90%;
   display: flex;
+  justify-content: space-between;
   align-items: center; /* Center children vertically */
-  gap: 20%;
   margin-top: auto; /* Push container to the center of the hero */
   margin-bottom: auto; /* Push container to the center of the hero */
 }
@@ -55,20 +55,15 @@ button:hover {
   background-color: #ddd;
 }
 
-/* RTL layout for Arabic */
-.hero.rtl {
-  background-image: linear-gradient(to left, #eab02b, #fdcc7b);
+.rtl .container {
+  flex-direction: row-reverse; /* Reverse the direction for RTL languages */
 }
 
-.hero.rtl .container {
-  flex-direction: row-reverse; /* Reverse the order of items */
+.rtl .text {
+  text-align: right; /* Align text to the right for RTL languages */
 }
 
-.hero.rtl .text {
-  text-align: right; /* Align text to the right for Arabic */
-}
-
-
-.hero.rtl .image img {
-  margin-right: 50%;
+.rtl .image {
+  margin-left: 0; /* Reset left margin for RTL languages */
+  margin-right: 9%; /* Adjust right margin for RTL languages */
 }

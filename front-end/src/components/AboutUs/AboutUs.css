@@ -1,0 +1,87 @@
+/* AboutUs.css */
+
+/* Base styles */
+.about-us-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    gap: 10%; /* Spacing between logo and text */
+  }
+  
+  .about-us-container .logo {
+    text-align: left; /* Align logo to the left */
+  }
+  
+  .about-us-container .logo img {
+    max-width: 300px; /* Limit logo width */
+    height: auto;
+    display: block;
+  }
+  
+  .company-info {
+    text-align: left;
+    font-size: 20px;
+    max-width: 70%;
+  }
+  
+  /* RTL layout for Arabic */
+  .about-us-container.rtl {
+    direction: rtl; /* Set text direction to RTL */
+  }
+  
+  .about-us-container.rtl .content {
+    flex-direction: row-reverse; /* Reverse the order of items */
+  }
+  
+  .about-us-container.rtl .company-info {
+    text-align: right; /* Align text to the right for Arabic */
+  }
+  
+  
+  /* Media Query for smaller screens */
+  @media screen and (max-width: 1000px) {
+    /* Responsive adjustments */
+    .about-us-container {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .content {
+      flex-direction: column; /* Switch to column layout */
+      align-items: center;
+      justify-content: center; /* Center content vertically */
+      width: 100%;
+    }
+  
+    .about-us-container .logo {
+      margin-bottom: 10px; /* Adjust spacing */
+      text-align: center;
+      max-width: 400px; /* Limit logo width */
+    }
+  
+    .about-us-container .logo img {
+      margin: 0 auto; /* Center the logo horizontally */
+      min-width: 250px;
+      max-width: 80%; /* Make the logo responsive */
+      height: auto;
+      display: block;
+    }
+  
+    .company-info {
+      width: 100%;
+      text-align: center; /* Center the text */
+      font-size: 20px; /* Decrease font size for smaller screens */
+    }
+  }
+  
