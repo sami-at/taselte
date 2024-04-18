@@ -14,7 +14,7 @@ nav {
 
 .logo img {
   padding-top: 5px;
-  height: 80px;
+  height: 70px;
 }
 
 .menu-icon {
@@ -23,6 +23,10 @@ nav {
 
 .exit-icon {
   font-size: 30px;
+}
+
+.exit-icon:hover {
+  cursor: pointer;
 }
 
 .navigation-links {
@@ -42,7 +46,7 @@ nav {
   top: 0;
   right: 0;
   height: 100%;
-  width: 240px;
+  width: 200px;
   background-color: #fff4db;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -105,5 +109,6 @@ nav {
 
   .menu-icon {
     display: block;
+    margin-right: 10px;
   }
 }

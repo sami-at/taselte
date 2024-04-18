@@ -11,6 +11,7 @@ import ProductsPage from './components/Products/ProductsPage/ProductsPage'; // A
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import FooterM from './components/Footer/FooterM/FooterM'; // Import FooterM component
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
+          <FooterM /> {/* Render FooterM component */}
         </div>
       </Router>
     </I18nextProvider>

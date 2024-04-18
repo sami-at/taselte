@@ -10,8 +10,13 @@
     "description": "Découvrez les produits de miel de la plus haute qualité",
     "button": "Acheter maintenant"
   },
+  "footer": {
+    "followUs": "SUIVEZ-NOUS",
+    "contactUs": "CONTACTEZ-NOUS",
+    "thankYou": "Merci d'avoir visité notre magasin"
+  },
   "aboutUs": {
-    "title": "À propos de nous",
+    "title": "QUI SOMMES-NOUS",
     "description": "Notre objectif est de fournir les meilleurs, les plus fins et les plus luxueux types de miel naturel marocain gratuit aux meilleurs prix. Votre confiance et votre satisfaction sont notre priorité. Miel de Daghmous, Miel de Sidr, Miel de Caroube, Miel de Thym, Miel de Calyptus, Miel d'Orange."
   }
 }

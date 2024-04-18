@@ -5,6 +5,10 @@
     align-items: center;
     cursor: pointer;
   }
+
+  .language-select:hover {
+    cursor: pointer;
+  }
   
   .language-select select {
     padding: 12px; /* Increase padding for a bigger select */
@@ -17,7 +21,6 @@
 
   }
 
-  
   
   option {
     background-color: #fff;

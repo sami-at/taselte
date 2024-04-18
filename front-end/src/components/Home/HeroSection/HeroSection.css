@@ -4,12 +4,13 @@
   background-image: linear-gradient(to right, #eab02b, #fdcc7b);
   padding: 30px 50px; /* Reduce top and bottom padding */
   position: relative;
-  height: 80vh;
+  height: auto;
   display: flex;
   justify-content: center; /* Center the container horizontally */
 }
 
 .container {
+  height: 80vh;
   width: 90%;
   display: flex;
   justify-content: space-between;

@@ -1,0 +1,38 @@
+/* FooterM.css */
+.footer-mobile {
+  display: none; /* Hide by default */
+}
+
+.footer-mobile .footer-column h3 {
+  display: flex;
+  align-items: center; /* Align text and icon vertically */
+  justify-content: space-between; /* Add space between text and icon */
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.arrow-icon.rotate {
+  transform: rotate(180deg); /* Rotate the icon */
+}
+
+
+@media (max-width: 601px) {
+  .footer-mobile {
+    display: block; /* Show on mobile */
+    background-color: #eda600; /* Dark blue background */
+    color: #fff; /* White text color */
+    padding-top: 2rem; /* Top padding */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+  }
+
+  .footer-mobile.rtl {
+    text-align: right; /* Align text to the right */
+    direction: rtl;
+  }
+}
+
