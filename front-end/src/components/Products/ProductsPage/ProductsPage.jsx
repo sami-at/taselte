@@ -3,7 +3,7 @@ import { Products } from '../ProductCard/ProductCard';
 import './ProductsPage.css';
 
 const ProductsPage = () => {
-  const [products, setProducts] = useState([1,2,3]);
+  const [products, setProducts] = useState([1,2,3,4,5,6,7,8,9,10,11,12,13,14]);
 
   // useEffect(() => {
   //   const fetchData = async () => {

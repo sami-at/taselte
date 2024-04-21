@@ -2,8 +2,8 @@
 .product-container {
     display: flex; /* Use flexbox for simple listing */
     flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-    justify-content: space-between; /* Distribute items evenly */
     margin: 0 auto; /* Center the list horizontally */
+    gap: 20px;
   }
   .product-grid{
     width: 300px; /* Adjust width as needed */
