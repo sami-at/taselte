@@ -1,13 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Products } from '../ProductCard/ProductCard';
 import './ProductsPage.css';
 
 const ProductsPage = () => {
-  return (
-    <div className="products-page">
-      <h2>All Products</h2>
-      {/* Add your content for the products page */}
-    </div>
-  );
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/products');
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return( 
+    <div className="product-container">
+      {products.map((product) => (
+        <Products key={product.id} product={product} /> // Pass product data
+      ))}
+  </div>
+)
 };
 
 export default ProductsPage;
