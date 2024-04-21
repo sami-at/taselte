@@ -26,7 +26,6 @@ export function Products(props) {
                                 <li className="fas fa-star"><FontAwesomeIcon icon={faStar} /></li>
                                 <li className="fas fa-star"><FontAwesomeIcon icon={faStar} /></li>
                                 <li className="fas fa-star"><FontAwesomeIcon icon={faStar} /></li>
-                                
                             </ul>
                             <h3 className="title"><a href="#">Men's Blazer</a></h3>
                             <div className="price"><span>$90.00</span> $66.00</div>
