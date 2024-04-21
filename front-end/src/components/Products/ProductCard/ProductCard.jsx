@@ -1,7 +1,7 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faHeart} from '@fortawesome/free-solid-svg-icons';
+import { faStar, faHeart, faRandom} from '@fortawesome/free-solid-svg-icons';
 
 
 export function Products(props) {
@@ -17,17 +17,16 @@ export function Products(props) {
                             <span className="product-discount-label">-33%</span>
                             <ul className="product-links">
                                 <li><a href="#" data-tip="Add to Wishlist"><FontAwesomeIcon icon={faHeart} /></a></li>
-                                {/* <li><a href="#" data-tip="Compare"><FontAwesomeIcon icon={faRandom} /></a></li>
-                                <li><a href="#" data-tip="Quick View"><FontAwesomeIcon icon={faSearch} /></a></li> */}
+                                <li><a href="#" data-tip="Compare"><FontAwesomeIcon icon={faRandom} /></a></li>
+                                {/* <li><a href="#" data-tip="Quick View"><FontAwesomeIcon icon={faSearch} /></a></li> */}
                             </ul>
                         </div>
                         <div className="product-content">
                             <ul className="rating">
                                 <li className="fas fa-star"><FontAwesomeIcon icon={faStar} /></li>
-                                <li className="fas fa-star"></li>
-                                <li className="fas fa-star"></li>
-                                <li className="far fa-star"></li>
-                                <li className="far fa-star"></li>
+                                <li className="fas fa-star"><FontAwesomeIcon icon={faStar} /></li>
+                                <li className="fas fa-star"><FontAwesomeIcon icon={faStar} /></li>
+                                
                             </ul>
                             <h3 className="title"><a href="#">Men's Blazer</a></h3>
                             <div className="price"><span>$90.00</span> $66.00</div>

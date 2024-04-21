@@ -26,7 +26,6 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-          <ProductsHome />
           <Footer />
           <FooterM /> {/* Render FooterM component */}
         </div>
