@@ -8,7 +8,6 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import ProductsPage from './components/Products/ProductsPage/ProductsPage'; // Adjusted import path
-import ProductsHome from './components/Products/ProductsHome/ProductsHome'; // Adjusted import path
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
