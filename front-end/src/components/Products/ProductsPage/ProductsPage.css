@@ -1,0 +1,11 @@
+/* ProductPage.css */
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 60px auto; /* Horizontal centering */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}

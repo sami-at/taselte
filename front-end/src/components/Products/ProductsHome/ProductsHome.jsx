@@ -4,21 +4,21 @@ import './ProductsHome.css';
 
 
 const ProductsPage = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([1,2,3,4]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://127.0.0.1:8000/api/products');
-        const data = await response.json();
-        setProducts(data.slice(0, 3));
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch('http://127.0.0.1:8000/api/products');
+  //       const data = await response.json();
+  //       setProducts(data.slice(0, 3));
+  //     } catch (error) {
+  //       console.error('Error fetching products:', error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   return( 
     <div className="product-container">
