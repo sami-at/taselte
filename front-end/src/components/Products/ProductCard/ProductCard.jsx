@@ -6,7 +6,7 @@ import { faStar, faHeart, faRandom } from '@fortawesome/free-solid-svg-icons';
 import './ProductCard.css';
 import ProductDetails from '../ProductDetails/ProductDetails';
 
-export function Products() {
+export function Products(product) {
   const [showDetails, setShowDetails] = useState(false);
 
   const toggleDetails = () => {
@@ -24,10 +24,10 @@ export function Products() {
         </div>
         <div className="product-content">
           <h3 className="title">
-            <a href="#">Men's Blazer</a>
+            <a href="#">{product.name}</a>
           </h3>
           <div className="price">
-            <span>$90.00</span> $66.00
+            <span>$90.00</span> ${product.price}
           </div>
           <a className="view-more" href="#">
             view more

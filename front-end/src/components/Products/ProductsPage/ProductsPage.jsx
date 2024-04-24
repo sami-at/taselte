@@ -1,31 +1,39 @@
 // ProductPage.jsx
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Products } from '../ProductCard/ProductCard';
 import './ProductsPage.css';
 
 
 const ProductsPage = () => {
-  const [products, setProducts] = useState([1,2,3,4,5,6,7,8,9,10,11,12,13,14]);
+  const [products, setProducts] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch('http://127.0.0.1:8000/api/products');
-  //       const data = await response.json();
-  //       setProducts(data);
-  //     } catch (error) {
-  //       console.error('Error fetching products:', error);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://honeysite-production.up.railway.app/api/products');
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
 
-  //   fetchData();
-  // }, []);
+    fetchData();
+  }, []);
 
   return( 
     <div className="product-container">
       {products.map((product) => (
-        <Products key={product.id} product={product} /> // Pass product data
+        <Products 
+          key={product.id}
+          image={product.image}
+          name={product.name}
+          price={product.price}
+          totalSales={product.totalSales}
+          timeLeft={product.timeLeft}
+          rating={product.rating} 
+        /> // Pass product data
       ))}
   </div>
 )
