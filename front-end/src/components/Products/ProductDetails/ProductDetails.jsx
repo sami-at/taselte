@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProductDetails.css';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,6 +6,22 @@ import { faPlus, faMinus, faTag, faTimes } from '@fortawesome/free-solid-svg-ico
 
 const ProductDetails = ({ onClose }) => {
   const [quantity, setQuantity] = useState(1);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/product');
+        const data = await response.json();
+        setProducts(data);
+        console.log(data)
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleIncrement = () => {
     setQuantity(prevQuantity => prevQuantity + 1);
@@ -29,9 +45,9 @@ const ProductDetails = ({ onClose }) => {
             <img className="product-details-image" src="./image1.jpeg" alt="Product 1" />
           </div>
           <div className="product-details-right">
-            <h2 className="product-details-title">Men's Blazer</h2>
+            <h2 className="product-details-title">{products.name}</h2>
             <div className="product-details-price">
-              <span className="current-price">$66.00</span>
+              <span className="current-price">${products.price}</span>
               <span className="old-price">$90.00</span>
               <span className="saving"> <FontAwesomeIcon className='tag-icon' icon={faTag} /> SAVE 33%</span>
             </div>
@@ -56,7 +72,7 @@ const ProductDetails = ({ onClose }) => {
             </div>
             <button className="order-now-btn">Order Now <FaWhatsapp className='whatsapp-icon' size={30} /></button>
             <div className="product-description">
-              <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>{products.description}</p>
             </div>
           </div>
         </div>
