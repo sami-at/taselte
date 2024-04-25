@@ -4,8 +4,11 @@ import React, { useState } from 'react';
 import './ProductCard.css';
 import ProductDetails from '../ProductDetails/ProductDetails';
 
-export function Products(product) {
+export function Products(props) {
   const [showDetails, setShowDetails] = useState(false);
+  const {id, image, name, price}= props.product
+  console.log(2);
+
 
   const toggleDetails = () => {
     setShowDetails(!showDetails);
@@ -18,21 +21,21 @@ export function Products(product) {
           <a  className="image">
             <img className="pic-1" src="./image1.jpeg" alt="Product 1" />
           </a>
-          <span className="product-discount-label">-33%</span>
+          <span className="product-discount-label">-33%</span>{price}
         </div>
         <div className="product-content">
           <h3 className="title">
-            <a>{product.name}</a>
+            <a>{name}</a>
           </h3>
           <div className="price">
-            <span>$90.00</span> ${product.price}
+            <span>$90.00</span> 
           </div>
           <a className="view-more" href="#">
             view more
           </a>
         </div>
       </div>
-      {showDetails && <ProductDetails onClose={toggleDetails} productID={product.id} />}
+      {showDetails && <ProductDetails onClose={toggleDetails} productID={id} />}
     </div>
   );
 }

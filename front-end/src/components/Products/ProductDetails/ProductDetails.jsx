@@ -6,14 +6,14 @@ import { faPlus, faMinus, faTag, faTimes } from '@fortawesome/free-solid-svg-ico
 
 const ProductDetails = ({ onClose , productID }) => {
   const [quantity, setQuantity] = useState(1);
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(`https://honeysite-production.up.railway.app/api/products/${productID}`);
         const data = await response.json();
-        setProducts(data);
+        setProduct(data);
         console.log(data)
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -45,9 +45,9 @@ const ProductDetails = ({ onClose , productID }) => {
             <img className="product-details-image" src="./image1.jpeg" alt="Product 1" />
           </div>
           <div className="product-details-right">
-            <h2 className="product-details-title">{products.name}</h2>
+            <h2 className="product-details-title">{product.name}</h2>
             <div className="product-details-price">
-              <span className="current-price">${products.price}</span>
+              <span className="current-price">${product.price}</span>
               <span className="old-price">$90.00</span>
               <span className="saving"> <FontAwesomeIcon className='tag-icon' icon={faTag} /> SAVE 33%</span>
             </div>
@@ -72,7 +72,7 @@ const ProductDetails = ({ onClose , productID }) => {
             </div>
             <button className="order-now-btn">Order Now <FaWhatsapp className='whatsapp-icon' size={30} /></button>
             <div className="product-description">
-              <p>{products.description}</p>
+              <p>{product.description}</p>
             </div>
           </div>
         </div>
