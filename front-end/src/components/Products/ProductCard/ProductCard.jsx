@@ -6,7 +6,7 @@ import ProductDetails from '../ProductDetails/ProductDetails';
 
 export function Products(props) {
   const [showDetails, setShowDetails] = useState(false);
-  const {id, image, name, price}= props.product
+  const {id, image, name, price, totalSales, timeLeft, rating}= props.product
   console.log(2);
 
 
