@@ -39,12 +39,12 @@ const ProductsHome = () => {
         ))}
 
         {/* Fourth card position with overlay */}
-        <div href="/products" className="see-more-overlay">
+        <a href="/products" className="see-more-overlay">
           <span  className="see-more-link">
             See More<hr>
           </hr>Products...
           </span>
-        </div>
+        </a>
       </div>
     </div>
   );

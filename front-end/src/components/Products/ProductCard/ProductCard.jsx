@@ -32,7 +32,7 @@ export function Products(product) {
           </a>
         </div>
       </div>
-      {showDetails && <ProductDetails onClose={toggleDetails} />}
+      {showDetails && <ProductDetails onClose={toggleDetails} productID={product.id} />}
     </div>
   );
 }

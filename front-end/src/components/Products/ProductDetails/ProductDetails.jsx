@@ -4,14 +4,14 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faTag, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const ProductDetails = ({ onClose }) => {
+const ProductDetails = ({ onClose , productID }) => {
   const [quantity, setQuantity] = useState(1);
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/product');
+        const response = await fetch(`https://honeysite-production.up.railway.app/api/products/${productID}`);
         const data = await response.json();
         setProducts(data);
         console.log(data)

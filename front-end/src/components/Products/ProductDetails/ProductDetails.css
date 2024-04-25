@@ -23,7 +23,7 @@
   padding: 20px;
   border-radius: 8px;
   width: 70%;
-  height: 70%;
+  height: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   overflow: auto; /* Make the modal scrollable */
@@ -69,9 +69,11 @@
   flex: 2;
   padding-left: 20px;
   margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .product-details-title {
+  text-align: center;
   font-size: 35px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
@@ -240,6 +242,10 @@ label {
 @media (max-width: 800px) {
   .product-details-content {
     flex-direction: column; /* Stack the elements vertically */
+  }
+
+  .product-details-left {
+    margin: auto;    
   }
 
   p {
