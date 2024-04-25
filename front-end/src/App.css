@@ -7,7 +7,7 @@
   
   /* Styling the scrollbar handle */
   ::-webkit-scrollbar-thumb {
-    background: #2f3542; /* Color of the scrollbar thumb */
+    background: #9da2b1; /* Color of the scrollbar thumb */
     border-radius: 5px; /* Rounded corners of the scrollbar thumb */
     border: 1px solid #ecf0f1; /* Optional: Adds a border around the scrollbar thumb */
   }

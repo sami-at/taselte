@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="text">
           <h1>{t('hero.heading')}</h1>
           <p>{t('hero.description')}</p>
-          <button>{t('hero.button')}</button>
+          <button className='hero-button'>{t('hero.button')}</button>
         </div>
         <div className="image">
           <img src={honeyJarImage} alt="Honey Jar" /> {/* Use the imported image */}
