@@ -24,7 +24,13 @@
     border: 1px solid #e7e7e7;    
     border-radius: 15px;
     cursor: pointer;
+    transition: ease-in-out 0.3s;
     
+  }
+
+  .see-more-overlay:hover {
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.228);
+
   }
   
   hr {

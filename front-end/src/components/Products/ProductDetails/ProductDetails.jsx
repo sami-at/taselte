@@ -4,9 +4,9 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faTag, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const ProductDetails = ({ onClose , productID }) => {
+const ProductDetails = ({ onClose, productID }) => {
   const [quantity, setQuantity] = useState(1);
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,14 +14,13 @@ const ProductDetails = ({ onClose , productID }) => {
         const response = await fetch(`https://honeysite-production.up.railway.app/api/products/${productID}`);
         const data = await response.json();
         setProduct(data);
-        console.log(data)
       } catch (error) {
         console.error('Error fetching products:', error);
       }
     };
 
     fetchData();
-  }, []);
+  }, [productID]);
 
   const handleIncrement = () => {
     setQuantity(prevQuantity => prevQuantity + 1);
@@ -32,6 +31,20 @@ const ProductDetails = ({ onClose , productID }) => {
       setQuantity(prevQuantity => prevQuantity - 1);
     }
   };
+
+  const handleOrderNow = () => {
+    const productName = encodeURIComponent(product.name);
+    const unitPrice = product.price;
+    const totalPrice = quantity * unitPrice;
+    const message = `Nom du produit: ${productName}%0A` + // %0A represents a line break in URL encoding
+                    `Prix unit: $${unitPrice}%0A` +
+                    `Prix total: $${totalPrice}`;
+  
+    const sellerPhoneNumber = '+212639260422'; // Seller's WhatsApp phone number
+    const whatsappLink = `https://wa.me/${sellerPhoneNumber}/?text=${message}`;
+    window.open(whatsappLink, '_blank');
+  };
+  
 
   return (
     <div>
@@ -70,7 +83,7 @@ const ProductDetails = ({ onClose , productID }) => {
                 </button>
               </div>
             </div>
-            <button className="order-now-btn">Order Now <FaWhatsapp className='whatsapp-icon' size={30} /></button>
+            <button className="order-now-btn" onClick={handleOrderNow}>Order Now <FaWhatsapp className='whatsapp-icon' size={30} /></button>
             <div className="product-description">
               <p>{product.description}</p>
             </div>
