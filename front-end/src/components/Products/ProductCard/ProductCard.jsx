@@ -30,7 +30,7 @@ export function Products(props) {
           <div className="price">
             <span>$90.00</span> {price}
           </div>
-          <a className="view-more" href="#">
+          <a className="view-more" >
             view more
           </a>
         </div>
