@@ -19,7 +19,7 @@ export function Products(props) {
       <div className="product-grid" onClick={toggleDetails}>
         <div className="product-image">
           <a  className="image">
-            <img className="pic-1" src="./image1.jpeg" alt="Product 1" />
+          <img className="pic-1" src={image} alt={name} /> {/* Use the dynamic image prop */}
           </a>
           <span className="product-discount-label">-33%</span>
         </div>

@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './ProductDetails.css';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faMinus, faTag, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faMinus, faTag, faTimes, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const ProductDetails = ({ onClose, productID }) => {
   const [quantity, setQuantity] = useState(1);
   const [product, setProduct] = useState({});
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +21,19 @@ const ProductDetails = ({ onClose, productID }) => {
     };
 
     fetchData();
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 800);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    document.body.style.overflow = 'hidden'; // Prevent body scrolling
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      document.body.style.overflow = 'auto'; // Re-enable body scrolling
+    };
   }, [productID]);
 
   const handleIncrement = () => {
@@ -44,14 +58,12 @@ const ProductDetails = ({ onClose, productID }) => {
     const whatsappLink = `https://wa.me/${sellerPhoneNumber}/?text=${message}`;
     window.open(whatsappLink, '_blank');
   };
-  
 
   return (
-    <div>
-      <div className="backdrop" onClick={onClose}></div>
+    <div className="product-details-overlay">
       <div className="product-details-modal">
         <div className="exit-icon" onClick={onClose}>
-          <FontAwesomeIcon icon={faTimes} />
+          <FontAwesomeIcon icon={isMobile ? faArrowLeft : faTimes} />
         </div>
         <div className="product-details-content">
           <div className="product-details-left">
@@ -67,8 +79,8 @@ const ProductDetails = ({ onClose, productID }) => {
             <div className="product-details-size">
               <label htmlFor="volume">Volume:</label>
               <select id="size">
-                <option value="1">1 Litre</option>
-                <option value="2">2 Litres</option>
+                <option value="1">500 g</option>
+                <option value="2">1 Kg</option>
               </select>
             </div>
             <div className="product-details-quantity">

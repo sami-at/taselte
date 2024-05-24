@@ -5,13 +5,14 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import './App.css';
 
+
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
-import ProductsPage from './components/Products/ProductsPage/ProductsPage'; // Adjusted import path
+import ProductsPage from './components/Products/ProductsPage/ProductsPage';
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
-import FooterM from './components/Footer/FooterM/FooterM'; // Import FooterM component
+import FooterM from './components/Footer/FooterM/FooterM';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
-          <FooterM /> {/* Render FooterM component */}
+          <FooterM />
         </div>
       </Router>
     </I18nextProvider>
