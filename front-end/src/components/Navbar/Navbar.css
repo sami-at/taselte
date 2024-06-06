@@ -106,6 +106,9 @@ nav {
   .navdrawer-top .exit-icon {
     margin-top: 10px;
   }
+  .navdrawer-top li {
+    margin-left: auto;
+  }
 
   .menu-icon {
     display: block;

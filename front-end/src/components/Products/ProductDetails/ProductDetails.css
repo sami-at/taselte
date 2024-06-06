@@ -92,7 +92,7 @@ body.modal-open {
 
 .product-details-price {
   
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 30px;
 }
 
@@ -345,7 +345,7 @@ label {
   .product-details-content {
     flex-direction: column; /* Stack the elements vertically */
     padding: 0% 10%;
-    padding-top: 100px;
+    padding-top: 30px;
     padding-bottom: 20px;
   }
 
