@@ -58,9 +58,13 @@ const ProductDetails = ({ onClose, productID }) => {
     window.open(whatsappLink, '_blank');
   };
 
+  const stopPropagation = (event) => {
+    event.stopPropagation();
+  };
+
   return (
-    <div className="product-details-overlay">
-      <div className="product-details-modal">
+    <div className="product-details-overlay" onClick={onClose}>
+      <div className="product-details-modal" onClick={stopPropagation}>
         <div className="exit-icon" onClick={onClose}>
           <FontAwesomeIcon icon={isMobile ? faArrowLeft : faTimes} />
         </div>
@@ -72,8 +76,8 @@ const ProductDetails = ({ onClose, productID }) => {
             <h2 className="product-details-title">{product.name}</h2>
             <div className="product-details-price">
               <span className="current-price">{product.price} DH</span>
-              <span className="old-price">{product.old_price} DH</span>
-              <span className="saving"><FontAwesomeIcon className="tag-icon" icon={faTag} /> SAVE {product.discount}%</span>
+              {product.old_price && <span className="old-price">{product.old_price} DH</span>}
+              {product.discount && <span className="saving"><FontAwesomeIcon className="tag-icon" icon={faTag} /> SAVE {product.discount}%</span>}
             </div>
             <div className="product-details-size">
               <label htmlFor="volume">Volume:</label>

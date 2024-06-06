@@ -17,14 +17,14 @@ export function Products({ product }) {
           <a className="image">
             <img className="pic-1" src={image} alt={name} />
           </a>
-          <span className="product-discount-label">-{discount}%</span>
+          {discount && <span className="product-discount-label">-{discount}%</span>}
         </div>
         <div className="product-content">
           <h3 className="title">
             <a>{name}</a>
           </h3>
           <div className="price">
-            <span className="old-price">{old_price}DH</span>
+            {old_price && <span className="old-price">{old_price}DH</span>}
             {price}DH
           </div>
           <a className="view-more">
