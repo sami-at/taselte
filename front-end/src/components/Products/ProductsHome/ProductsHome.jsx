@@ -8,7 +8,7 @@ const ProductsHome = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://honeysite-production.up.railway.app/api/products');
+        const response = await fetch('https://tasselte.000webhostapp.com/api/products');
         const data = await response.json();
         setProducts(data);
       } catch (error) {
