@@ -15,7 +15,7 @@ export function Products({ product }) {
       <div className="product-grid" onClick={toggleDetails}>
         <div className="product-image">
           <a className="image">
-            <img className="pic-1" src={image} alt={name} />
+            <img className="pic-1" src={`https://tasselte.000webhostapp.com/${image}`} alt={name} />
           </a>
           {discount && <span className="product-discount-label">-{discount}%</span>}
         </div>

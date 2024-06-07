@@ -70,7 +70,7 @@ const ProductDetails = ({ onClose, productID }) => {
         </div>
         <div className="product-details-content">
           <div className="product-details-left">
-            <img className="product-details-image" src={product.image} alt={product.name} />
+            <img className="product-details-image" src={`https://tasselte.000webhostapp.com/${product.image}`} alt={product.name} />
           </div>
           <div className="product-details-right">
             <h2 className="product-details-title">{product.name}</h2>
