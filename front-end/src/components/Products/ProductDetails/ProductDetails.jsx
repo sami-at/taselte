@@ -98,8 +98,8 @@ const ProductDetails = ({ onClose, productID }) => {
             <div className="product-details-size">
               <label htmlFor="volume">Volume:</label>
               <select id="size">
-                <option value="1">500 g</option>
                 <option value="2">1 Kg</option>
+                <option value="1">500 g</option>
               </select>
             </div>
             <div className="product-details-quantity">
