@@ -8,6 +8,7 @@ const ProductDetails = ({ onClose, productID }) => {
   const [quantity, setQuantity] = useState(1);
   const [product, setProduct] = useState({});
   const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+  const [modalImageSrc, setModalImageSrc] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -58,6 +59,16 @@ const ProductDetails = ({ onClose, productID }) => {
     window.open(whatsappLink, '_blank');
   };
 
+  const handleImageClick = (src) => {
+    setModalImageSrc(src);
+  };
+
+  const handleImageExit = (event) => {
+    event.stopPropagation();
+    // Resetting the modal image source to close the image modal
+    setModalImageSrc('');
+  };
+
   const stopPropagation = (event) => {
     event.stopPropagation();
   };
@@ -68,9 +79,14 @@ const ProductDetails = ({ onClose, productID }) => {
         <div className="exit-icon" onClick={onClose}>
           <FontAwesomeIcon icon={isMobile ? faArrowLeft : faTimes} />
         </div>
-        <div className="product-details-content">
+        <div className="product-details-content" onClick={stopPropagation}>
           <div className="product-details-left">
-            <img className="product-details-image" src={`https://tasselte.000webhostapp.com/${product.image}`} alt={product.name} />
+            <img
+              className="product-details-image"
+              src={`https://tasselte.000webhostapp.com/${product.image}`}
+              alt={product.name}
+              onClick={() => handleImageClick(`https://tasselte.000webhostapp.com/${product.image}`)}
+            />
           </div>
           <div className="product-details-right">
             <h2 className="product-details-title">{product.name}</h2>
@@ -105,6 +121,11 @@ const ProductDetails = ({ onClose, productID }) => {
           </div>
         </div>
       </div>
+      {modalImageSrc && (
+        <div className="image-modal-overlay" onClick={handleImageExit}>
+          <img className="image-modal-img" src={modalImageSrc} alt="Enlarged product"  />
+        </div>
+      )}
     </div>
   );
 };

@@ -1,7 +1,5 @@
-/* ProductCard.css  */
-
 .product-grid {
-    max-width: 500px; /* Adjust width as needed */
+    display: inline-block; /* Ensures the card fits the content width */
     margin: 10px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -29,8 +27,9 @@
 }
 
 .product-grid .product-image img {
-    width: 250px;
-    height: 300px;
+    width: 100%; /* Make the image take the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    width: 300px;
 }
 
 .product-grid .product-discount-label {
@@ -111,6 +110,3 @@
     opacity: 1;
     bottom: 20px;
 }
-
-
-
