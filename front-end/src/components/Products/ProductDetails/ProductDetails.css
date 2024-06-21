@@ -69,12 +69,13 @@ body.modal-open {
 }
 
 .product-details-image {
-  min-width: 240px;
-  max-width: 300px;
+  min-width: 360px;
   width: 100%;
   height: auto;
   border-radius: 10px;
   cursor: pointer;
+  margin-top: 20px;
+  
 }
 
 .image-modal-overlay {
@@ -151,6 +152,10 @@ body.modal-open {
 .product-details-size label {
   display: block;
   margin-bottom: 5px;
+}
+
+#volume {
+  font-size: larger;
 }
 
 .product-details-size select {
@@ -251,6 +256,8 @@ body.modal-open {
 .product-description p {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
+  margin-bottom: 0px;
+  margin-right: 10px;
 }
 
 .whatsapp-icon {

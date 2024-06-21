@@ -96,11 +96,8 @@ const ProductDetails = ({ onClose, productID }) => {
               {product.discount && <span className="saving"><FontAwesomeIcon className="tag-icon" icon={faTag} /> SAVE {product.discount}%</span>}
             </div>
             <div className="product-details-size">
-              <label htmlFor="volume">Volume:</label>
-              <select id="size">
-                <option value="2">1 Kg</option>
-                <option value="1">500 g</option>
-              </select>
+                <label htmlFor="volume">Volume:</label>
+                <div id="volume">1 Kilogram</div>
             </div>
             <div className="product-details-quantity">
               <label htmlFor="quantity">Quantity:</label>
